@@ -1,3 +1,3 @@
-module gotodocker_client
+module github.com/inpure/gotodocker_client
 
 go 1.18
