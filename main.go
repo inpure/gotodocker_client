@@ -19,11 +19,11 @@ func main() {
 
 	for {
 		input, _ := inputReader.ReadString('\n') // read user inputs
-		inputInfo := strings.Trim(input, "\r\n")
-		if strings.ToUpper(inputInfo) == "Q" { // input "q" then quit
+		//inputInfo := strings.Trim(input, "\r\n")
+		if strings.ToUpper(input) == "Q\n" { // input "q" then quit
 			return
 		}
-		_, err := conn.Write([]byte(inputInfo))
+		_, err := conn.Write([]byte(input))
 		if err != nil {
 			return
 		}
